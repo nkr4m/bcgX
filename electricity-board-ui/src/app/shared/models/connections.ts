@@ -1,0 +1,20 @@
+export class Connections{
+    'id':number
+	'applicantName':string
+	'gender':string
+	'district':string
+	'state':string
+	'pincode':number
+	'ownership':string
+	'govtIdType':string
+	'idNumber':number
+	'category':string
+	'loadApplied':number
+	'dateOfApplication':Date
+	'dateOfApproval':Date
+	'modifiedDate':Date
+	'status':string
+	'reviewerId':number
+	'reviewerName':string
+	'reviewerComments':string
+}

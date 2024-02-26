@@ -1,0 +1,44 @@
+.custom-mat-form-field {
+    width:  100%; /* Set your preferred width */
+    
+  }
+
+  .custom-mat-form-field2 {
+    width:  75%; /* Set your preferred width */
+    
+  }
+
+  /* Add these styles to your CSS or SCSS file */
+.table-container {
+  overflow-y: auto; /* Enable horizontal scrolling if needed */
+   /* Set your desired max height */
+}
+
+
+.edit-icon:hover {
+  cursor: pointer;
+  color: #000000; /* Change this to the desired color on hover */
+}
+
+.edit-icon{
+  color: grey;
+}
+
+li{
+  cursor: pointer;
+}
+
+.active>.page-link{
+  background-color: #000000;
+  color: white;
+  border: #000000;
+}
+
+a{
+  color: #000000;
+}
+
+.custom-snackbar {
+  font-size: 56px; /* Adjust the font size as needed */
+}
+

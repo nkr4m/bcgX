@@ -1,0 +1,38 @@
+<div style="margin-top: 20px">
+    <div class="text-center mt-5 mb-5">
+      <h1 class="display-2" style="font-weight: 400">
+        Connection Details -<small class="text-body-secondary"> Visual Mode</small>
+      </h1>
+      <h5 style="margin-top: -6px; font-weight: 400">View/Search the records in an interactive visual experience.</h5>
+    </div>
+  
+    <div class="container text-center">
+  
+      
+  
+  
+      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded border-0">
+        
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-lg-12 col-md-12">
+              <mat-form-field class="custom-mat-form-field">
+                <mat-label>Year</mat-label>
+                <input (input)="handleSearch()" [(ngModel)]="searchYear" matInput placeholder="Enter a year" maxlength="4">
+              </mat-form-field>
+            </div>
+            <!-- <div class="col-12 col-sm-12 col-lg-1 col-md-1">
+              <span class="mb-2" style="float: left;"> <button  mat-raised-button>Search</button></span>
+            </div> -->
+          </div>
+        </div>
+        
+        <!-- <button (click)="randomize()">ran</button> -->
+  
+        <canvas style="height: 45vh;overflow-y: auto;" baseChart class="chart" [data]="barChartData" [options]="barChartOptions" [plugins]="barChartPlugins"
+          [type]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <br><br>

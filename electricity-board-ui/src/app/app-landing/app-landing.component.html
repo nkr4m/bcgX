@@ -1,0 +1,52 @@
+<div style="margin-top: 20px" class="mx-auto">
+  <div class="text-center mt-5 mb-5">
+    <h1 class="display-2" style="font-weight: 400">
+      Electricity
+      <small class="text-body-secondary">Board</small>
+    </h1>
+    <h5 style="margin-top: -6px; font-weight: 400">Staff Console</h5>
+    <h5 style="margin-top: -6px; font-weight: 200; font-size: 14px">
+      Developed by - ramachandran_nk (nnkrama11@gmail.com)
+    </h5>
+  </div>
+
+
+
+
+
+  <div class="container-fluid text-center">
+    <h4 style="margin-top: -20px">Console Functions</h4>
+
+    <div class="row mb-2 justify-content-center">
+      <div class="col-12 col-md-4 d-flex">
+        <div style="border-left: solid 5px;"
+          class="card flex-fill shadow-sm p-3 mb-3 bg-body-tertiary rounded border-right-0 border-top-0 border-bottom-0">
+          <div class="card-body">
+            <h5 style="margin-top: -20px">Connection Details - Grid Mode</h5>
+            <p>View/Search the records in a grid experience.</p>
+            <a type="button" [routerLink]="['/connection-dtls-grid']" style="float: right"
+              class="btn btn-outline-dark btn-sm">
+              <mat-icon>arrow_forward_ios</mat-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 d-flex">
+        <div style="border-left: solid 5px;"
+          class="card flex-fill shadow-sm p-3 mb-3 bg-body-tertiary rounded border-right-0 border-top-0 border-bottom-0">
+          <div class="card-body">
+            <h5 style="margin-top: -20px">Connection Details - Visual Mode</h5>
+            <p>View/Search the records in an interactive visual experience.</p>
+            <a type="button" [routerLink]="['/connection-dtls-visual']" style="float: right"
+              class="btn btn-outline-dark btn-sm">
+              <mat-icon>arrow_forward_ios</mat-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

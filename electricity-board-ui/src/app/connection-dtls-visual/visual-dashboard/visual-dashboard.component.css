@@ -1,0 +1,8 @@
+.card{
+    border-left: 5px solid black;
+}
+
+.custom-mat-form-field {
+    width:  100%; /* Set your preferred width */
+    
+  }

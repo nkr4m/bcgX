@@ -1,0 +1,204 @@
+
+<div class="container-fluid p-3 pb-0">
+    <div class="text-center mb-3">
+        <h1 class="display-6" style="font-weight: 400">
+          Connection Details
+        </h1>
+        <h5 style="margin-top: -6px; font-weight: 400">Connection Id - {{this.data.user?.id}}</h5>
+      </div>
+    <form [formGroup]="connDtlsForm" (ngSubmit)="handleFormSaveCall()">
+        <!-- non-editabe -->
+        <div class="container">
+            <h5>Registration Details</h5>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Date of Application</mat-label>
+                            <input matInput formControlName="dateOfApplication" [disabled]="true">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Govt ID Type</mat-label>
+                            <input matInput formControlName="govtIdType" [disabled]="true">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Govt ID Number</mat-label>
+                            <input matInput formControlName="idNumber" [disabled]="true">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+
+        <!-- editable -->
+        <div class="container mt-3">
+            <h5>Application Details</h5>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Applicant Name</mat-label>
+                            <input matInput formControlName="applicantName">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Gender</mat-label>
+                            <input matInput formControlName="gender">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>District</mat-label>
+                            <input matInput formControlName="district">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>State</mat-label>
+                            <input matInput formControlName="state">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Pincode</mat-label>
+                            <input matInput formControlName="pincode">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Category</mat-label>
+                            <input matInput formControlName="category">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Ownership</mat-label>
+                            <input matInput formControlName="ownership" [disabled]="true">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Load Applied (Kv)</mat-label>
+                            <input matInput formControlName="loadApplied">
+                            <mat-error *ngIf="connDtlsForm.get('loadApplied')?.hasError('loadExceeded')">Load cannot exceed<strong> 20Kv</strong></mat-error>
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Date of Approval</mat-label>
+                            <input matInput formControlName="dateOfApproval">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Modified Date</mat-label>
+                            <input matInput formControlName="modifiedDate">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Status</mat-label>
+                            <input matInput formControlName="status">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+        <!-- editabe -->
+        <div class="container mt-3">
+            <h5>Reviewer Comments</h5>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Reviewer ID</mat-label>
+                            <input matInput formControlName="reviewerId">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Reviewer Name</mat-label>
+                            <input matInput formControlName="reviewerName">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <mat-form-field class="example-full-width custom-mat-form-field">
+                            <mat-label>Reviewer Comments</mat-label>
+                            <input matInput formControlName="reviewerComments">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+        <mat-dialog-actions class="justify-content-end">
+            <button [disabled]="!connDtlsForm.valid" mat-raised-button type="submit">Save</button>
+            <button mat-raised-button type="button" (click)="onClose()">Close</button>
+        </mat-dialog-actions>
+
+        
+
+    </form>
+</div>
+
+
